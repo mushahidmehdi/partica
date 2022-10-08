@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Search from '@core/Search';
 import logoIcon from 'assests/icons/logo.svg';
 import { useAuthUser } from '@core/utility/authHook';
 import ProfileDropdown from '@core/ProfileDropdown';
@@ -17,7 +16,6 @@ const Header = () => {
     <HeaderWrapper>
       <Logo src={logoIcon} alt='Paratica'></Logo>
       <AccountWrapper>
-        <Search />
         <Avatar onClick={() => setOpenMenu(true)}>
           <p>{capitalizeFirstLetter(user)}</p>
           {openMenu && <ProfileDropdown setOpenMenu={setOpenMenu} />}
@@ -33,8 +31,7 @@ const HeaderWrapper = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  padding-inline: 2rem;
+  padding: 2rem;
 `;
 
 const AccountWrapper = styled.div`

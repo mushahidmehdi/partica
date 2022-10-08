@@ -34,7 +34,7 @@ const Index = ({ setOpenMenu }) => {
 };
 
 const DropDownContainer = styled.div`
-  background-color: #fff;
+  background-color: #21242c;
   position: absolute;
   right: 1%;
   box-shadow: 0px 8px 16px 0px #bebebe33;
@@ -55,7 +55,7 @@ const DropDownItem = styled.div`
 
   > span {
     margin-inline-start: 0.7rem;
-    color: ${({ clr }) => (clr ? '#EA3B3B' : '#2D3748')};
+    color: ${({ theme }) => theme.clr[100]};
   }
 
   @media only screen and (max-width: 1076px) {
